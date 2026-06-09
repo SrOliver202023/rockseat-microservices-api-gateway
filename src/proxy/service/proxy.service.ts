@@ -3,7 +3,7 @@
 import { HttpService } from '@nestjs/axios';
 import { Injectable, Logger } from '@nestjs/common';
 import { firstValueFrom } from 'rxjs';
-import { serviceConfig } from 'src/config/gateway.config';
+import { serviceConfig } from '../../config/gateway.config';
 
 @Injectable()
 export class ProxyService {
