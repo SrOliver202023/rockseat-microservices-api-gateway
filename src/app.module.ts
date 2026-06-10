@@ -36,6 +36,7 @@ import { CustomThrottlerGuard } from './guards/throttler.guard';
           limit: configService.get<number>('RATE_LIMIT_LONG', 1000), // 1000 request per 15 minute
         },
       ],
+      inject: [ConfigService],
     }),
     ProxyModule,
     MiddlewareModule,

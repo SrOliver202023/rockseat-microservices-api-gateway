@@ -13,7 +13,7 @@ import { AuthController } from './controller/auth.controller';
     JwtModule.registerAsync({
       imports: [ConfigModule],
       useFactory: (configService: ConfigService) => ({
-        secret: configService.get<string>('JWT_SECRET'),
+        secret: configService?.get<string>('JWT_SECRET'),
         signOptions: { expiresIn: '24h' },
       }),
       inject: [ConfigService],
